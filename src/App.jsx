@@ -3,15 +3,14 @@ import { Route, Routes } from 'react-router-dom'
 import './App.scss'
 
 import Layout from './components/Layout/Layout'
-import Sidebar from './components/Sidebar/Sidebar'
+import Home from './components/Home/Home'
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <Layout />
       <Routes>
-        {/* <Route path='/' element={}/> */}
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Home/>} />
       </Routes>
     </>
   )

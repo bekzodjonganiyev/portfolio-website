@@ -8,7 +8,7 @@ import LogoS from '../../assets/images/logo-s.png'
 import SubLogo from '../../assets/images/logo_sub.png'
 
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
   return (
@@ -38,12 +38,12 @@ const Sidebar = () => {
         </li>
         <li>
           <a target="_blank" rel="noreffer" href="/">
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
           </a>
         </li>
         <li>
           <a target="_blank" rel="noreffer" href="/">
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faTelegram} color="#4d4d4e" />
           </a>
         </li>
       </ul>
