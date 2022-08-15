@@ -41,8 +41,10 @@
 
     img {
       margin-left: 20px;
+      margin-bottom: -9px;
+      margin-right: -10px;
       opacity: 0;
-      width: 32px;
+      width: 60px;
       height: auto;
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
