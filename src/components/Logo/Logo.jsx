@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import gsap from 'gsap-trial'
+import gsap from 'gsap'
+// import { DrawSVGPlugin } from 'gsap/all'
 import { DrawSVGPlugin } from 'gsap-trial/DrawSVGPlugin'
 
 import './Logo.scss'
