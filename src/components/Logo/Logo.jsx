@@ -11,9 +11,10 @@ const Logo = () => {
   const bgRef = useRef()
   const outlineLogoRef = useRef()
   const solidLogoRef = useRef()
-  const [displayNone, setDisplayNone] = useState("")
+  const [displayNone, setDisplayNone] = useState('')
 
   useLayoutEffect(() => {
+    gsap.config({ trialWarn: false })
     gsap.registerPlugin(DrawSVGPlugin)
 
     gsap
@@ -53,8 +54,8 @@ const Logo = () => {
         ref={solidLogoRef}
         src={LogoB}
         alt="JavaScript,  Developer"
-        width='600'
-        height= 'auto'
+        width="600"
+        height="auto"
       />
       <svg
         className={`${displayNone}`}
@@ -64,10 +65,7 @@ const Logo = () => {
         viewBox="0 0 559 950"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g
-          className="svg-container"
-          fill="none"
-        >
+        <g className="svg-container" fill="none">
           <path
             ref={outlineLogoRef}
             d="M147.564,196.418h107.112c30.991,0,56.203-25.213,56.203-56.204c0-30.991-25.213-56.205-56.204-56.205H147.564
