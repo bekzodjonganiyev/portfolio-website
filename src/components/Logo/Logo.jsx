@@ -27,7 +27,7 @@ const Logo = () => {
     }, 3000)
     setTimeout(() => {
       setDisplayBlock('display-block')
-    }, 3500)
+    }, 3200)
   })
 
   return (
