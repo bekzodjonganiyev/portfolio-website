@@ -1,57 +1,39 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
-// import { DrawSVGPlugin } from 'gsap/all'
-import { DrawSVGPlugin } from 'gsap-trial/DrawSVGPlugin'
+import React, { useEffect, useState } from 'react'
+import anime from 'animejs'
 
 import './Logo.scss'
 
 import LogoB from '../../assets/images/oxirgisi-b.png'
 
 const Logo = () => {
-  const bgRef = useRef()
-  const outlineLogoRef = useRef()
-  const solidLogoRef = useRef()
   const [displayNone, setDisplayNone] = useState('')
+  const [displayBlock, setDisplayBlock] = useState('solid-logo')
 
-  useLayoutEffect(() => {
-    gsap.config({ trialWarn: false })
-    gsap.registerPlugin(DrawSVGPlugin)
-
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-      })
-      .from(outlineLogoRef.current, {
-        drawSVG: 0,
-        duration: 20,
-      })
-
-    gsap.fromTo(
-      solidLogoRef.current,
-      {
-        opacity: 0,
+  useEffect(() => {
+    anime({
+      targets: 'svg path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'cubicBezier(.5, .05, .1, .3)',
+      duration: 3000,
+      delay: function (el, i) {
+        return i * 250
       },
-      {
-        opacity: 1,
-        delay: 4,
-        duration: 4,
-      }
-    )
+    })
   }, [])
 
   useEffect(() => {
     setTimeout(() => {
       setDisplayNone('display-none')
-    }, 4200)
+    }, 3000)
+    setTimeout(() => {
+      setDisplayBlock('display-block')
+    }, 3500)
   })
 
   return (
-    <div className="logo-container" ref={bgRef}>
+    <div className="logo-container">
       <img
-        className="solid-logo"
-        ref={solidLogoRef}
+        className={`${displayBlock}`}
         src={LogoB}
         alt="JavaScript,  Developer"
         width="600"
@@ -67,7 +49,6 @@ const Logo = () => {
       >
         <g className="svg-container" fill="none">
           <path
-            ref={outlineLogoRef}
             d="M147.564,196.418h107.112c30.991,0,56.203-25.213,56.203-56.204c0-30.991-25.213-56.205-56.204-56.205H147.564
 				c-5.522,0-10,4.478-10,10v92.409C137.564,191.94,142.042,196.418,147.564,196.418z M157.564,104.009h97.111
 				c19.963,0,36.204,16.241,36.204,36.205c0,19.963-16.241,36.204-36.204,36.204h-97.111V104.009z

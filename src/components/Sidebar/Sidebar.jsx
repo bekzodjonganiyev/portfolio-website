@@ -7,7 +7,7 @@ import './Sidebar.scss'
 import LogoS from '../../assets/images/oxirgisi-b.png'
 import SubLogo from '../../assets/images/bek.png'
 
-import { faEnvelope, faHome, faUser, faCode, faGear, faEye, faNewspaper, faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faHome, faUser, faCode, faNewspaper, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
