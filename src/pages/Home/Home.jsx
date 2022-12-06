@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div className="container home-page">
-      <div className="text-zone">
+      <div className="htext-zone">
         <h1>
           <span className={`${letterClass}`}>H</span>
           <span className={`${letterClass} _12`}>i,</span>
@@ -59,15 +59,23 @@ const Home = () => {
             idx={22}
           />
         </h1>
-        <Link to="/contact" className="flat-button">
-          CONTACT ME
-        </Link>
-        <a  className="flat-button" href='Bekzod`s Resume.pdf' download='Bekzod`s Resume.pdf'>
-          DOWNLOAD CV
-        </a>
+        <div className='buttons'>
+          <Link to="/contact" className="flat-button">
+            CONTACT ME
+          </Link>
+          <a
+            className="flat-button"
+            href="Bekzod`s Resume.pdf"
+            download="Bekzod`s Resume.pdf"
+          >
+            DOWNLOAD CV
+          </a>
+        </div>
       </div>
-      <Logo />
-      
+
+      <div className="big-b">
+        <h1>Big Logo Here</h1>
+      </div>
     </div>
   )
 }
