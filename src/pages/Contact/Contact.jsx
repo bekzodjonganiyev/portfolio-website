@@ -87,10 +87,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-
-        <div className='info-map'>
-          <img src={CallMeMP4} alt="call me gif"/>
-        </div>
       </div>
     </>
   )

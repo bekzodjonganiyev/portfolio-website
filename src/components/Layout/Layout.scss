@@ -30,8 +30,10 @@ section {
 .blog-page,
 .contact-page {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   will-change: contents;
-  z-index: 1;
+  padding: 20px 100px ;
   transform-style: preserve-3d;
   animation: fadeIn 0.5s forwards;
   animation-delay: 0.5s;
@@ -89,14 +91,9 @@ section {
       animation-delay: 1.3s;
     }
   }
-
-  .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
+  
+  &:first-child, &:last-child{
+    width: 50%;
   }
 
   .text-animate-hover {
@@ -110,11 +107,15 @@ section {
   section{
     display: flex;
     flex-direction: column-reverse;
-    margin: 0 auto;
 
     .page{
-      max-height: 600px;
-      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: -1;
+      width: 100% !important;
+      max-height: 500px;
+      overflow-y: scroll;
+      margin-bottom: 100px;
     }
   }
 }
